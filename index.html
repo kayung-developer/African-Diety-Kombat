@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>African Diety Kombat | Official Gallery</title>
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts: Cinzel for that "Mythic" look -->
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700;900&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    
+    <style>
+        /* --- GLOBAL THEME: TRIBAL COMBAT --- */
+        :root {
+            --bg-color: #0a0a0a;
+            --card-bg: rgba(20, 20, 20, 0.85);
+            --accent-gold: #FFD700;
+            --accent-fire: #FF4500;
+            --text-color: #f0f0f0;
+            --border-color: rgba(255, 215, 0, 0.2);
+        }
+
+        body {
+            background-color: var(--bg-color);
+            /* Subtle tribal texture or dark gradient */
+            background-image: 
+                linear-gradient(to bottom, rgba(0,0,0,0.8), var(--bg-color)),
+                repeating-linear-gradient(45deg, rgba(20,20,20,0.5) 0px, rgba(20,20,20,0.5) 2px, transparent 2px, transparent 10px);
+            color: var(--text-color);
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+        }
+
+        /* --- HEADERS --- */
+        .header-section {
+            text-align: center;
+            padding: 80px 20px 40px;
+            background: radial-gradient(circle at center, rgba(255, 69, 0, 0.15) 0%, transparent 70%);
+        }
+
+        h1 {
+            font-family: 'Cinzel', serif;
+            font-size: 4rem;
+            margin: 0;
+            text-transform: uppercase;
+            background: linear-gradient(to bottom, var(--accent-gold) 0%, #b8860b 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-shadow: 0 4px 15px rgba(255, 69, 0, 0.3);
+            letter-spacing: 2px;
+        }
+
+        .subtitle {
+            color: #888;
+            font-size: 1.2rem;
+            margin-top: 15px;
+            text-transform: uppercase;
+            letter-spacing: 4px;
+        }
+
+        h3 {
+            font-family: 'Cinzel', serif;
+            font-size: 2.2rem;
+            margin: 60px 0 30px;
+            text-align: center;
+            color: var(--accent-fire);
+            text-shadow: 0 0 10px rgba(255, 69, 0, 0.4);
+            border-bottom: 1px solid var(--border-color);
+            display: inline-block;
+            padding-bottom: 10px;
+        }
+        
+        .section-wrapper {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        /* --- SWIPER CONTAINER --- */
+        .swiper {
+            width: 100%;
+            padding-top: 20px;
+            padding-bottom: 60px;
+        }
+
+        .swiper-slide {
+            background-position: center;
+            background-size: cover;
+            width: 300px;
+            height: auto;
+            border-radius: 12px;
+            /* Glassmorphism Dark */
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.8);
+            overflow: hidden;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        /* Make the "Gameplay" slides wider */
+        .swiper-wide .swiper-slide {
+            width: 500px; 
+        }
+
+        .swiper-slide img {
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        /* Specific sizing for character cards vs landscape UI */
+        .character-slide img {
+            height: 400px; /* Taller for characters */
+            object-fit: contain; /* Don't crop characters */
+            background: radial-gradient(circle, #1a1a1a 0%, #000 100%);
+        }
+
+        .ui-slide img {
+            height: 300px;
+            object-fit: cover;
+        }
+
+        /* Hover Effects */
+        .swiper-slide:hover {
+            border-color: var(--accent-gold);
+            box-shadow: 0 0 25px rgba(255, 215, 0, 0.3);
+            transform: translateY(-5px);
+        }
+
+        .caption {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            padding: 15px;
+            background: linear-gradient(to top, rgba(0,0,0,0.95), transparent);
+            color: var(--accent-gold);
+            font-family: 'Cinzel', serif;
+            font-weight: 700;
+            text-align: center;
+            transform: translateY(100%);
+            transition: transform 0.3s ease;
+        }
+
+        .swiper-slide:hover .caption {
+            transform: translateY(0);
+        }
+
+        /* Pagination Dots */
+        .swiper-pagination-bullet {
+            background: #444;
+            opacity: 1;
+        }
+        .swiper-pagination-bullet-active {
+            background: var(--accent-fire);
+            box-shadow: 0 0 10px var(--accent-fire);
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            h1 { font-size: 2.5rem; }
+            .swiper-wide .swiper-slide { width: 85%; }
+            .swiper-slide { width: 70%; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="header-section">
+        <h1>African Diety Kombat</h1>
+        <div class="subtitle">Enter the Mythic Arena</div>
+    </div>
+
+    <!-- ============================================== -->
+    <!-- SECTION 1: THE ARENA (UI & GAMEPLAY)           -->
+    <!-- ============================================== -->
+    <div class="section-wrapper">
+        <h3>The Arena & Gameplay</h3>
+    </div>
+    
+    <!-- Using "swiper-wide" class for landscape images -->
+    <div class="swiper mySwiperWide swiper-wide">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide ui-slide"><img src="https://i.ibb.co/Z1pMK84d/Home.png" alt="Home"><div class="caption">Main Menu</div></div>
+            <div class="swiper-slide ui-slide"><img src="https://i.ibb.co/9mvgB3BM/Character-Selector.png" alt="Select"><div class="caption">Character Select</div></div>
+            <div class="swiper-slide ui-slide"><img src="https://i.ibb.co/6R7fnyTT/gameplay.png" alt="Gameplay"><div class="caption">Combat Gameplay</div></div>
+            <div class="swiper-slide ui-slide"><img src="https://i.ibb.co/pvLG8TvL/mode.png" alt="Modes"><div class="caption">Game Modes</div></div>
+            <div class="swiper-slide ui-slide"><img src="https://i.ibb.co/WptBd4K4/1.png" alt="Intro"><div class="caption">Intro Screen</div></div>
+        </div>
+        <div class="swiper-pagination"></div>
+    </div>
+
+    <!-- ============================================== -->
+    <!-- SECTION 2: THE PANTHEON (CHARACTERS)           -->
+    <!-- ============================================== -->
+    <div class="section-wrapper">
+        <h3>The Pantheon Roster</h3>
+    </div>
+
+    <div class="swiper mySwiperCharacters">
+        <div class="swiper-wrapper">
+            
+            <!-- Core Roster (Images 6-22) -->
+            <div class="swiper-slide character-slide"><img src="https://i.ibb.co/WNPhVYxQ/6.png"><div class="caption">Warrior 06</div></div>
+            <div class="swiper-slide character-slide"><img src="https://i.ibb.co/sD5jvLP/7.png"><div class="caption">Warrior 07</div></div>
+            <div class="swiper-slide character-slide"><img src="https://i.ibb.co/RT47Chqy/8.png"><div class="caption">Warrior 08</div></div>
+            <div class="swiper-slide character-slide"><img src="https://i.ibb.co/7JktgqKV/9.png"><div class="caption">Warrior 09</div></div>
+            <div class="swiper-slide character-slide"><img src="https://i.ibb.co/4wFnTc3g/10.png"><div class="caption">Warrior 10</div></div>
+            <div class="swiper-slide character-slide"><img src="https://i.ibb.co/1YXkKgTs/11.png"><div class="caption">Warrior 11</div></div>
+            <div class="swiper-slide character-slide"><img src="https://i.ibb.co/jPCBK0Hm/12.png"><div class="caption">Warrior 12</div></div>
+            <div class="swiper-slide character-slide"><img src="https://i.ibb.co/nqvLWWr7/13.png"><div class="caption">Warrior 13</div></div>
+            <div class="swiper-slide character-slide"><img src="https://i.ibb.co/27bgwM72/14.png"><div class="caption">Warrior 14</div></div>
+            <div class="swiper-slide character-slide"><img src="https://i.ibb.co/wF74ywJX/15.png"><div class="caption">Warrior 15</div></div>
+            <div class="swiper-slide character-slide"><img src="https://i.ibb.co/ympx8pVy/16.png"><div class="caption">Warrior 16</div></div>
+            <div class="swiper-slide character-slide"><img src="https://i.ibb.co/JWbSkpJn/17.png"><div class="caption">Warrior 17</div></div>
+            <div class="swiper-slide character-slide"><img src="https://i.ibb.co/zWvFF98Y/18.png"><div class="caption">Warrior 18</div></div>
+            <div class="swiper-slide character-slide"><img src="https://i.ibb.co/MxSTPWJ0/19.png"><div class="caption">Warrior 19</div></div>
+            <div class="swiper-slide character-slide"><img src="https://i.ibb.co/ymyzBZJz/20.png"><div class="caption">Warrior 20</div></div>
+            <div class="swiper-slide character-slide"><img src="https://i.ibb.co/jkj76HQ6/21.png"><div class="caption">Warrior 21</div></div>
+            <div class="swiper-slide character-slide"><img src="https://i.ibb.co/95pnN3p/22.png"><div class="caption">Warrior 22</div></div>
+
+          
+        </div>
+        <div class="swiper-pagination"></div>
+    </div>
+
+    <!-- Swiper JS Script -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <script>
+        // 1. Gameplay Slider (Slower, wider)
+        var swiperWide = new Swiper(".mySwiperWide", {
+            effect: "coverflow",
+            grabCursor: true,
+            centeredSlides: true,
+            slidesPerView: "auto",
+            loop: true,
+            autoplay: {
+                delay: 3500,
+                disableOnInteraction: false,
+            },
+            coverflowEffect: {
+                rotate: 20,
+                stretch: 0,
+                depth: 200,
+                modifier: 1,
+                slideShadows: true,
+            },
+            pagination: { el: ".swiper-pagination", clickable: true },
+        });
+
+        // 2. Character Slider (Faster spin)
+        var swiperChars = new Swiper(".mySwiperCharacters", {
+            effect: "coverflow",
+            grabCursor: true,
+            centeredSlides: true,
+            slidesPerView: "auto",
+            loop: true,
+            autoplay: {
+                delay: 2000,
+                disableOnInteraction: false,
+            },
+            coverflowEffect: {
+                rotate: 0, /* Flat rotation for cards */
+                stretch: 0,
+                depth: 100,
+                modifier: 2, /* Intensity of the depth */
+                slideShadows: true,
+            },
+            pagination: { el: ".swiper-pagination", clickable: true },
+        });
+    </script>
+</body>
+</html>
